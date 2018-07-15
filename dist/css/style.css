@@ -1,0 +1,169 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'exo-2-thin';
+  src: url("../fonts/exo-2-v4-latin_cyrillic-100.woff") format("woff2"), url("../fonts/exo-2-v4-latin_cyrillic-100.woff2") format("woff2"); }
+
+body {
+  font-family: 'Trebuchet MS', 'exo-2-thin', sans-serif;
+  margin: 0; }
+
+span.feed-cat-today {
+  color: white;
+  font-family: 'exo-2-thin';
+  text-align: center;
+  font-size: 36px;
+  display: block;
+  padding-top: 20px; }
+
+section {
+  min-width: 400px;
+  position: relative;
+  min-height: 100vh; }
+
+.elements-wrapper {
+  align-self: center;
+  margin: auto; }
+
+.catsfood {
+  background: url("../img/bg.jpg");
+  background-size: 1920px;
+  position: relative;
+  display: flex; }
+
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; }
+  .cards-wrapper input {
+    position: absolute;
+    left: -9999px; }
+  .cards-wrapper svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; }
+    .cards-wrapper svg path#outline {
+      transition: fill .1s ease-in-out; }
+  .cards-wrapper .product-weight {
+    transition: background-color .1s ease-in-out; }
+  .cards-wrapper .card-contents {
+    z-index: 1;
+    position: relative;
+    padding: 22px 48px 0 48px; }
+    .cards-wrapper .card-contents h1.product-title {
+      font-size: 48px;
+      margin: 6px 0 0; }
+    .cards-wrapper .card-contents h2.product-contents {
+      font-size: 24px;
+      margin: 0; }
+    .cards-wrapper .card-contents ul.present {
+      font-size: 14px;
+      list-style: none;
+      padding: 0;
+      color: #666666; }
+    .cards-wrapper .card-contents:before {
+      content: 'Сказочное заморское яство';
+      color: #666666; }
+  .cards-wrapper input:hover + label svg path#outline {
+    fill: #2EA8E6; }
+  .cards-wrapper input:hover + label span.product-aftermath a {
+    color: #2EA8E6; }
+  .cards-wrapper input:hover + label .product-weight {
+    background: #2EA8E6; }
+  .cards-wrapper input:checked + label svg path#outline {
+    fill: #D91667; }
+  .cards-wrapper input:checked + label .product-weight {
+    background: #D91667; }
+  .cards-wrapper input:checked + label .product-aftermath {
+    display: none; }
+  .cards-wrapper input:checked:hover + label .card-contents:before {
+    content: 'Котэ не одобряет?';
+    color: #E52E7A; }
+  .cards-wrapper input:checked:hover + label .product-aftermath {
+    display: none; }
+  .cards-wrapper input:checked:hover + label .product-aftermath-selected {
+    font-size: 13px;
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    color: white;
+    text-align: center;
+    width: 100%; }
+  .cards-wrapper input:checked:hover + label svg path#outline {
+    fill: #E52E7A; }
+  .cards-wrapper input:checked:hover + label .product-weight {
+    background: #E52E7A; }
+  .cards-wrapper input:disabled + label .card-contents {
+    color: #B3B3B3; }
+    .cards-wrapper input:disabled + label .card-contents:before {
+      color: #B3B3B3; }
+    .cards-wrapper input:disabled + label .card-contents ul.present {
+      color: #B3B3B3; }
+  .cards-wrapper input:disabled + label svg path#outline {
+    fill: #B3B3B3; }
+  .cards-wrapper input:disabled + label .product-weight {
+    background-color: #B3B3B3; }
+  .cards-wrapper input:disabled + label .card-img {
+    opacity: 0.5; }
+  .cards-wrapper input:disabled + label span.product-aftermath {
+    display: none; }
+  .cards-wrapper input:disabled + label span.out-of-stock {
+    display: block; }
+  .cards-wrapper label.card {
+    margin: 40px;
+    width: 320px;
+    height: 480px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none; }
+    .cards-wrapper label.card .product-weight {
+      text-align: center;
+      color: white;
+      background: #1698D9;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      display: block;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      z-index: 2; }
+      .cards-wrapper label.card .product-weight :first-child {
+        font-size: 42px;
+        line-height: 1.4; }
+      .cards-wrapper label.card .product-weight :last-child {
+        font-size: 20px;
+        line-height: 0.2; }
+    .cards-wrapper label.card span.product-aftermath {
+      font-size: 13px;
+      position: absolute;
+      bottom: -30px;
+      color: white;
+      text-align: center;
+      width: 100%; }
+      .cards-wrapper label.card span.product-aftermath a {
+        color: #1698D9;
+        text-decoration-style: dashed; }
+    .cards-wrapper label.card span.out-of-stock {
+      font-size: 13px;
+      position: absolute;
+      bottom: -30px;
+      color: white;
+      text-align: center;
+      width: 100%;
+      color: #FFFF66;
+      display: none; }
+  .cards-wrapper .card-img {
+    border-bottom-left-radius: 8px;
+    position: absolute;
+    z-index: 1;
+    width: 262px;
+    height: 287px;
+    bottom: 4px;
+    left: 4px;
+    background-position: -37px 22px;
+    background-repeat: no-repeat;
+    background-size: 373px;
+    background-image: url("../img/cat.png"); }
